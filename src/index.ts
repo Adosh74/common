@@ -5,6 +5,8 @@ interface Color {
     yellow?: number;
 }
 
+
+
 const color: Color = {
     red: 10,
     green: 10,
