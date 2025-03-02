@@ -30,14 +30,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Commit build artifacts (if any)
-        run: |
-          git add .
-          git commit -m "Build artifacts [skip ci]" || echo "No changes to commit"
-
-      - name: Bump version and publish
-        run: |
-          npm version patch -m "Bump version to %s [skip ci]"
-          npm publish
+      - name: publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
