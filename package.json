@@ -1,6 +1,6 @@
 {
   "name": "@mshebltickets/common",
-  "version": "1.0.11",
+  "version": "1.0.10",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "files": [
@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "del ./build/*",
     "build": "npm run clean && tsc",
-    "pub": "git add . && git commit -m \"updates\" && git push && npm version patch && npm run build && npm publish",
+    "pub": "git add . && git commit -m \"updates\" && npm version patch && git push && npm run build && npm publish",
     "gh:pub": "npm version patch && npm run build && npm publish"
   },
   "keywords": [],
